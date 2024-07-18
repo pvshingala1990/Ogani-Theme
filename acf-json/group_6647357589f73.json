@@ -1,0 +1,144 @@
+{
+    "key": "group_6647357589f73",
+    "title": "Social media",
+    "fields": [
+        {
+            "key": "field_667e8c834880d",
+            "label": "Social Media's Link",
+            "name": "info_social_medias_link",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add Row",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_667e8cb74880e",
+                    "label": "Social Media",
+                    "name": "repeat_select_social",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "default": "-- Select Social Media --",
+                        "fa fa-facebook": "Facebook",
+                        "fa fa-twitter": "Twitter",
+                        "fa fa-instagram": "Instagram",
+                        "fa fa-linkedin-in": "LinkedIn",
+                        "fa fa-youtube": "YouTube",
+                        "fa fa-pinterest-p": "Pinterest",
+                        "fa fa-snapchat-ghost": "Snapchat",
+                        "fa fa-whatsapp": "WhatsApp",
+                        "fa fa-tiktok": "TikTok",
+                        "fa fa-tumblr": "Tumblr",
+                        "fa fa-github": "GitHub",
+                        "fa fa-skype": "Skype",
+                        "fa fa-flickr": "Flickr",
+                        "fa fa-vimeo-v": "Vimeo"
+                    },
+                    "default_value": false,
+                    "return_format": "value",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": "",
+                    "parent_repeater": "field_667e8c834880d"
+                },
+                {
+                    "key": "field_667e8ce74880f",
+                    "label": "URL Link",
+                    "name": "repeat_social_link",
+                    "aria-label": "",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_667e8cb74880e",
+                                "operator": "!=",
+                                "value": "-- Select Social Media --"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "parent_repeater": "field_667e8c834880d"
+                },
+                {
+                    "key": "field_667e8d1648810",
+                    "label": "Open in a new tab?",
+                    "name": "repeat_open_new_tab",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_667e8cb74880e",
+                                "operator": "!=",
+                                "value": "-- Select Social Media --"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 1,
+                    "ui_on_text": "Yes",
+                    "ui_off_text": "No",
+                    "ui": 1,
+                    "parent_repeater": "field_667e8c834880d"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-information"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1719929283
+}
